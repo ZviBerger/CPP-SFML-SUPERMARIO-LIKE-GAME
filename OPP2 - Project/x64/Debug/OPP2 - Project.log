@@ -1,0 +1,140 @@
+﻿  ViewStation.cpp
+  Tree.cpp
+  TextBox.cpp
+  StaticObject.cpp
+  SpaceShip.cpp
+c:\program files (x86)\microsoft visual studio 14.0\vc\include\memory(1630): warning C4244: 'argument': conversion from 'double' to 'const float', possible loss of data
+  c:\users\zvika berger\desktop\project -20170913t192716z-001\project\opp2 - project\spaceship.cpp(20): note: see reference to function template instantiation 'std::unique_ptr<Animation,std::default_delete<_Ty>> std::make_unique<Animation,sf::Texture&,int,int,int,int,int,double>(sf::Texture &,int &&,int &&,int &&,int &&,int &&,double &&)' being compiled
+          with
+          [
+              _Ty=Animation
+          ]
+c:\program files (x86)\microsoft visual studio 14.0\vc\include\memory(901): warning C4244: 'argument': conversion from 'int' to 'const float', possible loss of data
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\memory(971): note: see reference to function template instantiation 'std::_Ref_count_obj<_Ty>::_Ref_count_obj<sf::Texture&,int,int,int,int,int,int>(sf::Texture &,int &&,int &&,int &&,int &&,int &&,int &&)' being compiled
+          with
+          [
+              _Ty=Animation
+          ]
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\memory(971): note: see reference to function template instantiation 'std::_Ref_count_obj<_Ty>::_Ref_count_obj<sf::Texture&,int,int,int,int,int,int>(sf::Texture &,int &&,int &&,int &&,int &&,int &&,int &&)' being compiled
+          with
+          [
+              _Ty=Animation
+          ]
+  c:\users\zvika berger\desktop\project -20170913t192716z-001\project\opp2 - project\spaceship.cpp(16): note: see reference to function template instantiation 'std::shared_ptr<Animation> std::make_shared<Animation,sf::Texture&,int,int,int,int,int,int>(sf::Texture &,int &&,int &&,int &&,int &&,int &&,int &&)' being compiled
+  Source.cpp
+  Shot.cpp
+c:\program files (x86)\microsoft visual studio 14.0\vc\include\memory(901): warning C4244: 'argument': conversion from 'double' to 'const float', possible loss of data
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\memory(971): note: see reference to function template instantiation 'std::_Ref_count_obj<_Ty>::_Ref_count_obj<sf::Texture&,int,int,int,int,int,double>(sf::Texture &,int &&,int &&,int &&,int &&,int &&,double &&)' being compiled
+          with
+          [
+              _Ty=Animation
+          ]
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\memory(971): note: see reference to function template instantiation 'std::_Ref_count_obj<_Ty>::_Ref_count_obj<sf::Texture&,int,int,int,int,int,double>(sf::Texture &,int &&,int &&,int &&,int &&,int &&,double &&)' being compiled
+          with
+          [
+              _Ty=Animation
+          ]
+  c:\users\zvika berger\desktop\project -20170913t192716z-001\project\opp2 - project\shot.cpp(21): note: see reference to function template instantiation 'std::shared_ptr<Animation> std::make_shared<Animation,sf::Texture&,int,int,int,int,int,double>(sf::Texture &,int &&,int &&,int &&,int &&,int &&,double &&)' being compiled
+  Rock.cpp
+  RemovableObj.cpp
+  ProcessInterface.cpp
+  PlaySound.cpp
+c:\users\zvika berger\desktop\project -20170913t192716z-001\project\opp2 - project\playsound.cpp(17): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+  MyExeption.cpp
+  MovableObject.cpp
+  Menu.cpp
+c:\users\zvika berger\desktop\project -20170913t192716z-001\project\opp2 - project\menu.cpp(37): warning C4305: '+=': truncation from 'double' to 'float'
+c:\users\zvika berger\desktop\project -20170913t192716z-001\project\opp2 - project\menu.cpp(47): warning C4244: 'argument': conversion from 'float' to 'sf::Uint8', possible loss of data
+  InfoBar.cpp
+  GameObject.cpp
+  GameManage.cpp
+  Fruit.cpp
+c:\program files (x86)\microsoft visual studio 14.0\vc\include\memory(901): warning C4244: 'argument': conversion from 'int' to 'const float', possible loss of data
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\memory(971): note: see reference to function template instantiation 'std::_Ref_count_obj<_Ty>::_Ref_count_obj<sf::Texture&,int,int,int,int,int,int>(sf::Texture &,int &&,int &&,int &&,int &&,int &&,int &&)' being compiled
+          with
+          [
+              _Ty=Animation
+          ]
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\memory(971): note: see reference to function template instantiation 'std::_Ref_count_obj<_Ty>::_Ref_count_obj<sf::Texture&,int,int,int,int,int,int>(sf::Texture &,int &&,int &&,int &&,int &&,int &&,int &&)' being compiled
+          with
+          [
+              _Ty=Animation
+          ]
+  c:\users\zvika berger\desktop\project -20170913t192716z-001\project\opp2 - project\fruit.cpp(13): note: see reference to function template instantiation 'std::shared_ptr<Animation> std::make_shared<Animation,sf::Texture&,int,int,int,int,int,int>(sf::Texture &,int &&,int &&,int &&,int &&,int &&,int &&)' being compiled
+  Factory.cpp
+  ExploableObj.cpp
+  Generating Code...
+  Compiling...
+  Controller.cpp
+  Bomb.cpp
+c:\program files (x86)\microsoft visual studio 14.0\vc\include\memory(901): warning C4244: 'argument': conversion from 'double' to 'const float', possible loss of data
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\memory(971): note: see reference to function template instantiation 'std::_Ref_count_obj<_Ty>::_Ref_count_obj<sf::Texture&,int,int,int,int,int,double>(sf::Texture &,int &&,int &&,int &&,int &&,int &&,double &&)' being compiled
+          with
+          [
+              _Ty=Animation
+          ]
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\memory(971): note: see reference to function template instantiation 'std::_Ref_count_obj<_Ty>::_Ref_count_obj<sf::Texture&,int,int,int,int,int,double>(sf::Texture &,int &&,int &&,int &&,int &&,int &&,double &&)' being compiled
+          with
+          [
+              _Ty=Animation
+          ]
+  c:\users\zvika berger\desktop\project -20170913t192716z-001\project\opp2 - project\bomb.cpp(13): note: see reference to function template instantiation 'std::shared_ptr<Animation> std::make_shared<Animation,sf::Texture&,int,int,int,int,int,double>(sf::Texture &,int &&,int &&,int &&,int &&,int &&,double &&)' being compiled
+  Astronaut.cpp
+c:\program files (x86)\microsoft visual studio 14.0\vc\include\memory(901): warning C4244: 'argument': conversion from 'double' to 'const float', possible loss of data
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\memory(971): note: see reference to function template instantiation 'std::_Ref_count_obj<_Ty>::_Ref_count_obj<sf::Texture&,int,int,int,int,int,double>(sf::Texture &,int &&,int &&,int &&,int &&,int &&,double &&)' being compiled
+          with
+          [
+              _Ty=Animation
+          ]
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\memory(971): note: see reference to function template instantiation 'std::_Ref_count_obj<_Ty>::_Ref_count_obj<sf::Texture&,int,int,int,int,int,double>(sf::Texture &,int &&,int &&,int &&,int &&,int &&,double &&)' being compiled
+          with
+          [
+              _Ty=Animation
+          ]
+  c:\users\zvika berger\desktop\project -20170913t192716z-001\project\opp2 - project\astronaut.cpp(17): note: see reference to function template instantiation 'std::shared_ptr<Animation> std::make_shared<Animation,sf::Texture&,int,int,int,int,int,double>(sf::Texture &,int &&,int &&,int &&,int &&,int &&,double &&)' being compiled
+c:\program files (x86)\microsoft visual studio 14.0\vc\include\memory(901): warning C4244: 'argument': conversion from 'int' to 'const float', possible loss of data
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\memory(971): note: see reference to function template instantiation 'std::_Ref_count_obj<_Ty>::_Ref_count_obj<sf::Texture&,int,int,int,int,int,int>(sf::Texture &,int &&,int &&,int &&,int &&,int &&,int &&)' being compiled
+          with
+          [
+              _Ty=Animation
+          ]
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\memory(971): note: see reference to function template instantiation 'std::_Ref_count_obj<_Ty>::_Ref_count_obj<sf::Texture&,int,int,int,int,int,int>(sf::Texture &,int &&,int &&,int &&,int &&,int &&,int &&)' being compiled
+          with
+          [
+              _Ty=Animation
+          ]
+  c:\users\zvika berger\desktop\project -20170913t192716z-001\project\opp2 - project\astronaut.cpp(20): note: see reference to function template instantiation 'std::shared_ptr<Animation> std::make_shared<Animation,sf::Texture&,int,int,int,int,int,int>(sf::Texture &,int &&,int &&,int &&,int &&,int &&,int &&)' being compiled
+  Astroid.cpp
+c:\program files (x86)\microsoft visual studio 14.0\vc\include\memory(901): warning C4244: 'argument': conversion from 'double' to 'const float', possible loss of data
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\memory(971): note: see reference to function template instantiation 'std::_Ref_count_obj<_Ty>::_Ref_count_obj<sf::Texture&,int,int,int,int,int,double>(sf::Texture &,int &&,int &&,int &&,int &&,int &&,double &&)' being compiled
+          with
+          [
+              _Ty=Animation
+          ]
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\memory(971): note: see reference to function template instantiation 'std::_Ref_count_obj<_Ty>::_Ref_count_obj<sf::Texture&,int,int,int,int,int,double>(sf::Texture &,int &&,int &&,int &&,int &&,int &&,double &&)' being compiled
+          with
+          [
+              _Ty=Animation
+          ]
+  c:\users\zvika berger\desktop\project -20170913t192716z-001\project\opp2 - project\astroid.cpp(12): note: see reference to function template instantiation 'std::shared_ptr<Animation> std::make_shared<Animation,sf::Texture&,int,int,int,int,int,double>(sf::Texture &,int &&,int &&,int &&,int &&,int &&,double &&)' being compiled
+  Animation.cpp
+c:\users\zvika berger\desktop\project -20170913t192716z-001\project\opp2 - project\animation.cpp(13): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\zvika berger\desktop\project -20170913t192716z-001\project\opp2 - project\animation.cpp(33): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  Alien.cpp
+c:\program files (x86)\microsoft visual studio 14.0\vc\include\memory(901): warning C4244: 'argument': conversion from 'float' to 'const int', possible loss of data
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\memory(971): note: see reference to function template instantiation 'std::_Ref_count_obj<_Ty>::_Ref_count_obj<sf::Texture&,int,int,float,float,int,float>(sf::Texture &,int &&,int &&,float &&,float &&,int &&,float &&)' being compiled
+          with
+          [
+              _Ty=Animation
+          ]
+  c:\program files (x86)\microsoft visual studio 14.0\vc\include\memory(971): note: see reference to function template instantiation 'std::_Ref_count_obj<_Ty>::_Ref_count_obj<sf::Texture&,int,int,float,float,int,float>(sf::Texture &,int &&,int &&,float &&,float &&,int &&,float &&)' being compiled
+          with
+          [
+              _Ty=Animation
+          ]
+  c:\users\zvika berger\desktop\project -20170913t192716z-001\project\opp2 - project\alien.cpp(14): note: see reference to function template instantiation 'std::shared_ptr<Animation> std::make_shared<Animation,sf::Texture&,int,int,float,float,int,float>(sf::Texture &,int &&,int &&,float &&,float &&,int &&,float &&)' being compiled
+  Generating Code...
+     Creating library C:\Users\Zvika Berger\Desktop\Project -20170913T192716Z-001\Project\x64\Debug\OPP2 - Project.lib and object C:\Users\Zvika Berger\Desktop\Project -20170913T192716Z-001\Project\x64\Debug\OPP2 - Project.exp
+sfml-main-d.lib(MainWin32.cpp.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'sfml-main-d.lib(MainWin32.cpp.obj)' or at 'C:\Users\Zvika Berger\Desktop\Project -20170913T192716Z-001\Project\x64\Debug\vc140.pdb'; linking object as if no debug info
+  OPP2 - Project.vcxproj -> C:\Users\Zvika Berger\Desktop\Project -20170913T192716Z-001\Project\x64\Debug\OPP2 - Project.exe
+  OPP2 - Project.vcxproj -> C:\Users\Zvika Berger\Desktop\Project -20170913T192716Z-001\Project\x64\Debug\OPP2 - Project.pdb (Full PDB)

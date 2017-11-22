@@ -1,0 +1,31 @@
+29
+154
+RR                                                                                                                                                      RR
+RR                                            A               A                                                                                         RR
+RR                                                                                     A                          RR                            S       RR
+RR                                                                                                                RR                                    RR
+RR     H                                                                                                          RR                                    RR
+RR                                                                                                                RR                                    RR
+RR            PF H F F                                              A                                  A          RR                                    RR
+RR            RRRRRRRRR                                                                                           RR                                    RR
+RR                                                                                                                RR          F     F                   RR
+RR                                                         T                                                      RR                                    RR
+RR  H  7           T    H      T    A  F   t    +      H      &     T   H      8    H     A      T  H R           RR F   T    A   H  R       T          RR
+RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR           RRRRRRRRRRRRRRRRRRRRR      RRRRRRRRRRRRR
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@           R@@@@@@@@@@@@@@@@@@@R    R@@@@@@@@@@@@@R
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@           R@@@@@@@@@@@@@@@@@@@R   R@@@@@@@@@@@@@@R
+RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR           RRRRRRRRRRRRRRRRRRRRR   RRRRRRRRRRRRRRRR
+RR FFFFRR                                           A                                                 R                                  R              RR
+RR FFFFRR                                                                                             RRRRR                                       A     RR
+RR FFFRRR                                                                                                                              R                RR
+RR FFFRRR                                                                F                A                                          R                  RR
+RR      R                    A                                         RRRR  F                                    A                R                    RR
+RR                                                            A    R   RRRRR  F                                                A             R          RR
+RRRRR                                                            R     RRRRRR   F                                                 R                     RR
+RRRRRRRRR                                                       R      RRRRRRR                                                  R                       RR
+RR F                      T                     F              R       RRRRRRRR                                                          R              RR
+RR         AR      T    H     T     A  F   T   F F     H     R         RRRRRRRR           A      T    H     A     A  F   T R         H    R  A   A      RR
+RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
