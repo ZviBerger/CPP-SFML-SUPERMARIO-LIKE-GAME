@@ -8,9 +8,9 @@ The purpose of the game: bring the astronaut into the spaceship.
 The game score is calculated according to the number of coins collected along the way.
 
 How to run:
-1. go to: x64 >> Release >> OPP2 - Project.exe
+1. Go to: x64 >> Release >> OPP2 - Project.exe
 
-2. install SFML on your visual studio (for c++) IDE.
+2. Install SFML on your visual studio (for c++) IDE.
    Open with VS.
 
 Enjoy!
