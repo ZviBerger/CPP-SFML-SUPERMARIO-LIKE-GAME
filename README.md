@@ -1,6 +1,10 @@
 # OOP-2-Project - The Moon Survivor
 
+<<<<<<< HEAD
 Object-Oriented Programming and Games Development  (2) - Final Project course
+=======
+Object-Oriented Programming and Games Development (2) course - Final Project 
+>>>>>>> 62ff75c4e811fdcb37c5b8aa3184ea8dd4f1549a
 
 Creators: Moishy Rakov && Zvika Berger
 
