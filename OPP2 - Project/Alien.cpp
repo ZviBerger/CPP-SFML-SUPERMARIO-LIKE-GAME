@@ -4,14 +4,16 @@
 //Alien C-tor
 /////////////////////////////////////////////////////////////////////////////////////
 Alien::Alien(sf::Vector2f &scaling, sf::Vector2f& position)
-	: RemovableObj(scaling, sf::FloatRect{ position.x,position.y,30,100 })
+	: RemovableObj(scaling, sf::FloatRect{ position.x,position.y,35,100 })
 	,m_dx(2), m_go2right(true),m_falling(false)
 {
 	static  sf::Texture txt{};
 	static bool loaded = false;
 	if (!loaded)
 		loaded = txt.loadFromFile(path2image::alien);
-	setAnim(std::make_shared<Animation>(txt, 0, 0, 833.75f, 921.f, 4, 0.15f));
+	// 0, 0, 833.75f, 921.f, 4, 0.15f)
+	setAnim(std::make_shared<Animation>(txt, 0, 0, 3335.f/4, 1842.f/2, 4, 0.15f));
+
 	//My physics values
 	m_phv._g =14;   // 1.622;
 	m_phv._angel = 0.5;
@@ -25,7 +27,6 @@ Alien::Alien(sf::Vector2f &scaling, sf::Vector2f& position)
 void Alien::updateMove()
 {
 	auto t = m_clock.getElapsedTime().asSeconds();
-	
 	auto newPos = sf::Vector2f{ getPosition().x - m_dx, getPosition().y };
 	if (!m_falling &&int(t) % 2 == 0)
 	{

@@ -26,6 +26,8 @@ public:
 	void astronautHitFruit(Astronaut &astron, Fruit &fruit);
 	void astronautHitSpaceShip(Astronaut &astron, SpaceShip &sp);
 
+	void shotHitRock(Shot & shot, Rock &rock);
+
 	void alienHitShot(Alien &ali, Shot &shot);
 	void alienHitRock(Alien &ali, Rock &rock);
 private:

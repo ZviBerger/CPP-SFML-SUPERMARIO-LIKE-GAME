@@ -14,7 +14,7 @@ public:
 	//bool isValidMove() const;
 protected:
 	sf::Clock m_clock;
-private:
 	std::shared_ptr<Animation> m_objAnimPtr;
+
 };
 

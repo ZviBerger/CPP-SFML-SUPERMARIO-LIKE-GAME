@@ -155,19 +155,24 @@
     <ClInclude Include="Controller.h" />
     <ClInclude Include="ExploableObj.h" />
     <ClInclude Include="Factory.h" />
+    <ClInclude Include="Fog.h" />
     <ClInclude Include="Fruit.h" />
     <ClInclude Include="GameManage.h" />
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="InfoBar.h" />
+    <ClInclude Include="ManageTrais.h" />
     <ClInclude Include="Menu.h" />
     <ClInclude Include="MovableObject.h" />
     <ClInclude Include="MyExeption.h" />
     <ClInclude Include="PlaySound.h" />
     <ClInclude Include="ProcessInterface.h" />
+    <ClInclude Include="RelativelyMovingObj.h" />
     <ClInclude Include="RemovableObj.h" />
+    <ClInclude Include="resource.h" />
     <ClInclude Include="Rock.h" />
     <ClInclude Include="Shot.h" />
     <ClInclude Include="SpaceShip.h" />
+    <ClInclude Include="Spark.h" />
     <ClInclude Include="StaticObject.h" />
     <ClInclude Include="TextBox.h" />
     <ClInclude Include="Tree.h" />
@@ -184,20 +189,24 @@
     <ClCompile Include="Controller.cpp" />
     <ClCompile Include="ExploableObj.cpp" />
     <ClCompile Include="Factory.cpp" />
+    <ClCompile Include="Fog.cpp" />
     <ClCompile Include="Fruit.cpp" />
     <ClCompile Include="GameManage.cpp" />
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="InfoBar.cpp" />
+    <ClCompile Include="ManageTrais.cpp" />
     <ClCompile Include="Menu.cpp" />
     <ClCompile Include="MovableObject.cpp" />
     <ClCompile Include="MyExeption.cpp" />
     <ClCompile Include="PlaySound.cpp" />
     <ClCompile Include="ProcessInterface.cpp" />
+    <ClCompile Include="RelativelyMovingObj.cpp" />
     <ClCompile Include="RemovableObj.cpp" />
     <ClCompile Include="Rock.cpp" />
     <ClCompile Include="Shot.cpp" />
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="SpaceShip.cpp" />
+    <ClCompile Include="Spark.cpp" />
     <ClCompile Include="StaticObject.cpp" />
     <ClCompile Include="TextBox.cpp" />
     <ClCompile Include="Tree.cpp" />
@@ -205,10 +214,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
     <None Include="images\coints.ai" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="level2.txt" />
+    <Text Include="level3.txt" />
     <Text Include="Levels.txt" />
     <Text Include="level1.txt" />
     <Text Include="level.txt" />
@@ -218,6 +230,9 @@
     <Image Include="images\fruit.png" />
     <Image Include="images\heart.png" />
     <Image Include="images\tree.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="OPP2 - Project.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

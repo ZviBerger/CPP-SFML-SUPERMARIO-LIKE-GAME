@@ -25,6 +25,7 @@ public:
 	void setPosition(sf::Vector2f &pos);
 	sf::Vector2f getPosition();
 	bool isEnd();
+	void setSpeed(const float &newSpeed) { m_speed = abs(newSpeed); };
 private:
 	bool m_end = false;
 	float m_frame;

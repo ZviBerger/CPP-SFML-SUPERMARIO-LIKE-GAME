@@ -26,6 +26,7 @@ public:
 	virtual void collide(Rock&       otherObject) = 0;
 	virtual void collide(Shot&       otherObject) = 0;
 	virtual void collide(SpaceShip&  otherObject) = 0;
+	
 	virtual void updateMove()=0;
 
 	void setPosition(sf::Vector2f &toMove);

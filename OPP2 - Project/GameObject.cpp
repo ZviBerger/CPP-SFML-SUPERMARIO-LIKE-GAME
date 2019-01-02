@@ -59,28 +59,9 @@ bool GameObject::contains(sf::Vector2f & point)
 
 sf::Color GameObject::getRandomColor() const
 {
-
-	switch (rand() % 7)
-	{
-	case 0:
-		return sf::Color::Yellow;
-	case 1:
-		return sf::Color::Blue;
-	case 2:
-		return sf::Color::Cyan;
-	case 3:
-		return sf::Color::Green;
-	case 4:
-		return sf::Color::Magenta;
-	case 5:
-		return sf::Color::Red;
-	case 6:
-		return sf::Color::Black;
-
-	default:
-		break;
-	}
-
-	return sf::Color();
+	using namespace sf;
+	static sf::Color colors[] = { Color::Yellow, Color::Blue,
+		Color::Cyan, Color::Magenta,Color::Red,Color::Black };
+	return colors[rand() % 5];
 }
 

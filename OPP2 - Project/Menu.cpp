@@ -1,10 +1,11 @@
 #include "Menu.h"
-
-
+#include "Spark.h"
+#include "ManageTrais.h"
 
 
 Menu::Menu(sf::Texture &texture, sf::Vector2f position, sf::Vector2f size, sf::RenderWindow &myWindow)
-	:GameManage(texture, position, size), m_window(myWindow)
+	:GameManage(texture, position, size),
+	m_window(myWindow)
 {
 	m_menuTxt.loadFromFile(path2image::menu);
 	m_background.setTexture(&m_menuTxt);
@@ -21,6 +22,7 @@ Menu::Menu(sf::Texture &texture, sf::Vector2f position, sf::Vector2f size, sf::R
 	for(auto Ypos : std::vector<float>{ 242 ,351 ,453 })
 	m_buttons[i++].setPosition(sf::Vector2f{ 390,Ypos });
 	
+	
 
 }
 
@@ -31,14 +33,17 @@ bool Menu::newGame()
 {
 	m_window.setFramerateLimit(40);
 	m_window.setSize(sf::Vector2u(unsigned int(windowSize.x), unsigned int(windowSize.y)));
+	for (size_t i = 0; i < 300; i++)
+		ManageTrais::addSpark(V2f{ float(rand() % int(windowSize.x)),float(rand() % int(windowSize.y)) }, rand() % 20, 60 * 30.f);
 
 	while (m_window.isOpen())
 	{
 		m_timer += 0.05f;
 
-		if (handleEvent()) //finish and start the g
+		if (handleEvent()) //finish and start the gam
 		{
 			m_window.setFramerateLimit(60);
+			ManageTrais::removeAllTrails();
 			return true;
 		}
 		for (int i = 0; i < 3; i++)
@@ -50,6 +55,8 @@ bool Menu::newGame()
 		}
 		m_window.clear();
 		m_window.draw(m_background);
+		ManageTrais::updateMove();
+		ManageTrais::draw(m_window);
 		m_window.draw(m_buttons[m_buttIndex]);
 		m_window.display(); 
 		
@@ -72,7 +79,7 @@ void Menu::showOtherWindow(const WindowButton &button, std::string path2image, c
 	background.setTexture(&texture);
 	winButton.setFillColor(defColor);
 	winButton.setPosition(button._position);
-
+	
 	while (m_window.isOpen())
 	{
 		for (sf::Event event; m_window.pollEvent(event)&& m_window.isOpen();)
@@ -84,17 +91,9 @@ void Menu::showOtherWindow(const WindowButton &button, std::string path2image, c
 				m_window.close();
 				break;
 			case sf::Event::MouseMoved:
-				if (winButton.getGlobalBounds().contains(sf::Vector2f{ float(event.mouseMove.x),float(event.mouseMove.y) }))
-				{
-					onTheButton = true;
-					winButton.setFillColor(button._presetColor);
-				}
-				else
-				{
-					winButton.setFillColor(defColor);
-					onTheButton = false;
-				}
-				break;
+					onTheButton = winButton.getGlobalBounds().contains(sf::Vector2f{ float(event.mouseMove.x),float(event.mouseMove.y) });
+					onTheButton? winButton.setFillColor(button._presetColor) : winButton.setFillColor(defColor);
+					break;
 			case sf::Event::MouseButtonPressed:
 				if (onTheButton)
 					return;

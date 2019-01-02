@@ -1,6 +1,7 @@
 #include "Astroid.h"
+#include "ManageTrais.h"
 
-
+ float time2live = 3;
 
 Astroid::Astroid(sf::Vector2f &scaling, sf::Vector2f& position)
 	:ExploableObj(scaling, sf::FloatRect{ position.x,position.y,20,20 })
@@ -12,8 +13,8 @@ Astroid::Astroid(sf::Vector2f &scaling, sf::Vector2f& position)
 	auto animPtr = std::make_shared<Animation>(txt, 0, 0, 64, 64, 16, 0.5);
 	animPtr->getSprite().rotate(float(rand() % 360));
 	setAnim(animPtr);
-	m_dx = rand() % 2-2;
-	m_dy = rand() % 3;
+	m_dx = float( rand() % 20-20 )/10.f;
+	m_dy = float(rand() % 20 ) / 10.f;
 }
 
 void Astroid::updateMove()
@@ -23,7 +24,13 @@ void Astroid::updateMove()
 		ExploableObj::updateMove();
 		return;
 	}
-	setPosition(sf::Vector2f{ getPosition().x + m_dx,getPosition().y + m_dy });
+	ManageTrais::addSpark(getPosition(), 5, time2live);
+	setPosition(getPosition() + V2f{ m_dx,m_dy });
+}
+
+void Astroid::draw(sf::RenderWindow & window)
+{
+	MovableObject::draw(window);
 }
 
 void Astroid::collide(GameObject & otherObject)

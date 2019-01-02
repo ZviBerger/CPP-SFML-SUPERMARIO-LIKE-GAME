@@ -3,8 +3,7 @@
 
 int main() {
 	
-	Controller contro{};
-	contro.startGame("Levels.txt");
+	Controller{}.startGame("Levels.txt");
 	return 0;
 }
 

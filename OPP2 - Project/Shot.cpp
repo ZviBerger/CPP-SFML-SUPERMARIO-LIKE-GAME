@@ -3,10 +3,9 @@
 
 
 Shot::Shot(sf::Vector2f & scaling, sf::Vector2f & position)
-	:ExploableObj(scaling, sf::FloatRect{ position.x,position.y,10,20 })
-	
-{
+	:ExploableObj(scaling, sf::FloatRect{ position.x,position.y,10,20 }){
 	Shot::Shot(scaling, position, RIGHT);
+
 }
 
 Shot::Shot(sf::Vector2f &scaling, sf::Vector2f& position,Movments side)
@@ -17,9 +16,8 @@ Shot::Shot(sf::Vector2f &scaling, sf::Vector2f& position,Movments side)
 	static bool loaded = false;
 	if(!loaded)
 		loaded = txt.loadFromFile(path2image::shot);
-	
-	m_clock.restart();
 
+	m_clock.restart();
 	auto anim = std::make_shared<Animation>(txt, 0, 0, 32, 64, 16, 0.8);
 	anim->getSprite().rotate(90);
 	setScaling((m_sideOfShot == LEFT) ? V2f{  scaling.x,-1*scaling.y } : scaling);	
@@ -49,10 +47,12 @@ void Shot::updateMove()
 	setPosition(sf::Vector2f{getPosition().x + x,getPosition().y  -  y });
 }
 
+
 void Shot::collide(GameObject & otherObject)
 {
 	otherObject.collide(*this);
 }
+
 
 void Shot::setSide(Movments side2move)
 {

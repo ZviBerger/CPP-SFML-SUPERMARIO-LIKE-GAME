@@ -1,9 +1,173 @@
-﻿  Menu.cpp
-     Creating library C:\Users\Zvika Berger\Documents\Project -20170913T192716Z-001\Project\x64\Release\OPP2 - Project.lib and object C:\Users\Zvika Berger\Documents\Project -20170913T192716Z-001\Project\x64\Release\OPP2 - Project.exp
+﻿  Alien.cpp
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\memory(901): warning C4244: 'argument': conversion from 'float' to 'const int', possible loss of data
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\memory(971): note: see reference to function template instantiation 'std::_Ref_count_obj<_Ty>::_Ref_count_obj<sf::Texture&,int,int,float,float,int,float>(sf::Texture &,int &&,int &&,float &&,float &&,int &&,float &&)' being compiled
+          with
+          [
+              _Ty=Animation
+          ]
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\memory(971): note: see reference to function template instantiation 'std::_Ref_count_obj<_Ty>::_Ref_count_obj<sf::Texture&,int,int,float,float,int,float>(sf::Texture &,int &&,int &&,float &&,float &&,int &&,float &&)' being compiled
+          with
+          [
+              _Ty=Animation
+          ]
+  Alien.cpp(15): note: see reference to function template instantiation 'std::shared_ptr<Animation> std::make_shared<Animation,sf::Texture&,int,int,float,float,int,float>(sf::Texture &,int &&,int &&,float &&,float &&,int &&,float &&)' being compiled
+  Animation.cpp
+Animation.cpp(13): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+Animation.cpp(33): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  Astroid.cpp
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\memory(901): warning C4244: 'argument': conversion from 'double' to 'const float', possible loss of data
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\memory(971): note: see reference to function template instantiation 'std::_Ref_count_obj<_Ty>::_Ref_count_obj<sf::Texture&,int,int,int,int,int,double>(sf::Texture &,int &&,int &&,int &&,int &&,int &&,double &&)' being compiled
+          with
+          [
+              _Ty=Animation
+          ]
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\memory(971): note: see reference to function template instantiation 'std::_Ref_count_obj<_Ty>::_Ref_count_obj<sf::Texture&,int,int,int,int,int,double>(sf::Texture &,int &&,int &&,int &&,int &&,int &&,double &&)' being compiled
+          with
+          [
+              _Ty=Animation
+          ]
+  Astroid.cpp(13): note: see reference to function template instantiation 'std::shared_ptr<Animation> std::make_shared<Animation,sf::Texture&,int,int,int,int,int,double>(sf::Texture &,int &&,int &&,int &&,int &&,int &&,double &&)' being compiled
+  Astronaut.cpp
+Astronaut.cpp(81): warning C4244: '-=': conversion from 'double' to 'float', possible loss of data
+Astronaut.cpp(165): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+Astronaut.cpp(167): warning C4244: '-=': conversion from 'double' to 'float', possible loss of data
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\memory(901): warning C4244: 'argument': conversion from 'double' to 'const float', possible loss of data
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\memory(971): note: see reference to function template instantiation 'std::_Ref_count_obj<_Ty>::_Ref_count_obj<sf::Texture&,int,int,int,int,int,double>(sf::Texture &,int &&,int &&,int &&,int &&,int &&,double &&)' being compiled
+          with
+          [
+              _Ty=Animation
+          ]
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\memory(971): note: see reference to function template instantiation 'std::_Ref_count_obj<_Ty>::_Ref_count_obj<sf::Texture&,int,int,int,int,int,double>(sf::Texture &,int &&,int &&,int &&,int &&,int &&,double &&)' being compiled
+          with
+          [
+              _Ty=Animation
+          ]
+  Astronaut.cpp(32): note: see reference to function template instantiation 'std::shared_ptr<Animation> std::make_shared<Animation,sf::Texture&,int,int,int,int,int,double>(sf::Texture &,int &&,int &&,int &&,int &&,int &&,double &&)' being compiled
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\memory(901): warning C4244: 'argument': conversion from 'int' to 'const float', possible loss of data
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\memory(971): note: see reference to function template instantiation 'std::_Ref_count_obj<_Ty>::_Ref_count_obj<sf::Texture&,int,int,int,int,int,int>(sf::Texture &,int &&,int &&,int &&,int &&,int &&,int &&)' being compiled
+          with
+          [
+              _Ty=Animation
+          ]
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\memory(971): note: see reference to function template instantiation 'std::_Ref_count_obj<_Ty>::_Ref_count_obj<sf::Texture&,int,int,int,int,int,int>(sf::Texture &,int &&,int &&,int &&,int &&,int &&,int &&)' being compiled
+          with
+          [
+              _Ty=Animation
+          ]
+  Astronaut.cpp(35): note: see reference to function template instantiation 'std::shared_ptr<Animation> std::make_shared<Animation,sf::Texture&,int,int,int,int,int,int>(sf::Texture &,int &&,int &&,int &&,int &&,int &&,int &&)' being compiled
+  Background.cpp
+Background.cpp(42): warning C4244: 'argument': conversion from 'const float' to 'unsigned int', possible loss of data
+Background.cpp(43): warning C4244: 'argument': conversion from 'const float' to 'unsigned int', possible loss of data
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\memory(1630): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Background.cpp(54): note: see reference to function template instantiation 'std::unique_ptr<Spark,std::default_delete<_Ty>> std::make_unique<Spark,sf::Vector2<float>,int,float>(sf::Vector2<float> &&,int &&,float &&)' being compiled
+          with
+          [
+              _Ty=Spark
+          ]
+  Bomb.cpp
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\memory(901): warning C4244: 'argument': conversion from 'double' to 'const float', possible loss of data
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\memory(971): note: see reference to function template instantiation 'std::_Ref_count_obj<_Ty>::_Ref_count_obj<sf::Texture&,int,int,int,int,int,double>(sf::Texture &,int &&,int &&,int &&,int &&,int &&,double &&)' being compiled
+          with
+          [
+              _Ty=Animation
+          ]
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\memory(971): note: see reference to function template instantiation 'std::_Ref_count_obj<_Ty>::_Ref_count_obj<sf::Texture&,int,int,int,int,int,double>(sf::Texture &,int &&,int &&,int &&,int &&,int &&,double &&)' being compiled
+          with
+          [
+              _Ty=Animation
+          ]
+  Bomb.cpp(13): note: see reference to function template instantiation 'std::shared_ptr<Animation> std::make_shared<Animation,sf::Texture&,int,int,int,int,int,double>(sf::Texture &,int &&,int &&,int &&,int &&,int &&,double &&)' being compiled
+  Controller.cpp
+  ExploableObj.cpp
+  Factory.cpp
+  Fog.cpp
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\memory(901): warning C4244: 'argument': conversion from 'int' to 'const float', possible loss of data
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\memory(971): note: see reference to function template instantiation 'std::_Ref_count_obj<_Ty>::_Ref_count_obj<sf::Texture&,int,int,int,int,int,int>(sf::Texture &,int &&,int &&,int &&,int &&,int &&,int &&)' being compiled
+          with
+          [
+              _Ty=Animation
+          ]
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\memory(971): note: see reference to function template instantiation 'std::_Ref_count_obj<_Ty>::_Ref_count_obj<sf::Texture&,int,int,int,int,int,int>(sf::Texture &,int &&,int &&,int &&,int &&,int &&,int &&)' being compiled
+          with
+          [
+              _Ty=Animation
+          ]
+  Fog.cpp(14): note: see reference to function template instantiation 'std::shared_ptr<Animation> std::make_shared<Animation,sf::Texture&,int,int,int,int,int,int>(sf::Texture &,int &&,int &&,int &&,int &&,int &&,int &&)' being compiled
+  Fruit.cpp
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\memory(901): warning C4244: 'argument': conversion from 'double' to 'const float', possible loss of data
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\memory(971): note: see reference to function template instantiation 'std::_Ref_count_obj<_Ty>::_Ref_count_obj<sf::Texture&,int,int,int,double,int,double>(sf::Texture &,int &&,int &&,int &&,double &&,int &&,double &&)' being compiled
+          with
+          [
+              _Ty=Animation
+          ]
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\memory(971): note: see reference to function template instantiation 'std::_Ref_count_obj<_Ty>::_Ref_count_obj<sf::Texture&,int,int,int,double,int,double>(sf::Texture &,int &&,int &&,int &&,double &&,int &&,double &&)' being compiled
+          with
+          [
+              _Ty=Animation
+          ]
+  Fruit.cpp(13): note: see reference to function template instantiation 'std::shared_ptr<Animation> std::make_shared<Animation,sf::Texture&,int,int,int,double,int,double>(sf::Texture &,int &&,int &&,int &&,double &&,int &&,double &&)' being compiled
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\memory(901): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+  GameManage.cpp
+  GameObject.cpp
+  InfoBar.cpp
+  ManageTrais.cpp
+  Menu.cpp
+Menu.cpp(37): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  MovableObject.cpp
+  MyExeption.cpp
+  PlaySound.cpp
+PlaySound.cpp(17): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+  ProcessInterface.cpp
+  Compiling...
+  RelativelyMovingObj.cpp
+  RemovableObj.cpp
+  Rock.cpp
+  Shot.cpp
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\memory(901): warning C4244: 'argument': conversion from 'double' to 'const float', possible loss of data
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\memory(971): note: see reference to function template instantiation 'std::_Ref_count_obj<_Ty>::_Ref_count_obj<sf::Texture&,int,int,int,int,int,double>(sf::Texture &,int &&,int &&,int &&,int &&,int &&,double &&)' being compiled
+          with
+          [
+              _Ty=Animation
+          ]
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\memory(971): note: see reference to function template instantiation 'std::_Ref_count_obj<_Ty>::_Ref_count_obj<sf::Texture&,int,int,int,int,int,double>(sf::Texture &,int &&,int &&,int &&,int &&,int &&,double &&)' being compiled
+          with
+          [
+              _Ty=Animation
+          ]
+  Shot.cpp(21): note: see reference to function template instantiation 'std::shared_ptr<Animation> std::make_shared<Animation,sf::Texture&,int,int,int,int,int,double>(sf::Texture &,int &&,int &&,int &&,int &&,int &&,double &&)' being compiled
+  Source.cpp
+  SpaceShip.cpp
+SpaceShip.cpp(66): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+SpaceShip.cpp(67): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\memory(1630): warning C4244: 'argument': conversion from 'double' to 'const float', possible loss of data
+  SpaceShip.cpp(20): note: see reference to function template instantiation 'std::unique_ptr<Animation,std::default_delete<_Ty>> std::make_unique<Animation,sf::Texture&,int,int,int,int,int,double>(sf::Texture &,int &&,int &&,int &&,int &&,int &&,double &&)' being compiled
+          with
+          [
+              _Ty=Animation
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\memory(901): warning C4244: 'argument': conversion from 'int' to 'const float', possible loss of data
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\memory(971): note: see reference to function template instantiation 'std::_Ref_count_obj<_Ty>::_Ref_count_obj<sf::Texture&,int,int,int,int,int,int>(sf::Texture &,int &&,int &&,int &&,int &&,int &&,int &&)' being compiled
+          with
+          [
+              _Ty=Animation
+          ]
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\memory(971): note: see reference to function template instantiation 'std::_Ref_count_obj<_Ty>::_Ref_count_obj<sf::Texture&,int,int,int,int,int,int>(sf::Texture &,int &&,int &&,int &&,int &&,int &&,int &&)' being compiled
+          with
+          [
+              _Ty=Animation
+          ]
+  SpaceShip.cpp(17): note: see reference to function template instantiation 'std::shared_ptr<Animation> std::make_shared<Animation,sf::Texture&,int,int,int,int,int,int>(sf::Texture &,int &&,int &&,int &&,int &&,int &&,int &&)' being compiled
+  Spark.cpp
+  StaticObject.cpp
+  TextBox.cpp
+  Tree.cpp
+  ViewStation.cpp
+ViewStation.cpp(68): warning C4305: 'argument': truncation from 'double' to 'float'
+     Creating library C:\Users\Zvika Berger\Desktop\Project - TMS\x64\Release\OPP2 - Project.lib and object C:\Users\Zvika Berger\Desktop\Project - TMS\x64\Release\OPP2 - Project.exp
   Generating code
-  1350 of 4143 functions (32.6%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
-    36 functions had inline decision re-evaluated but remain unchanged
+  4791 of 4798 functions (99.9%) were compiled, the rest were copied from previous compilation.
+    2527 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
-  OPP2 - Project.vcxproj -> C:\Users\Zvika Berger\Documents\Project -20170913T192716Z-001\Project\x64\Release\OPP2 - Project.exe
-  OPP2 - Project.vcxproj -> C:\Users\Zvika Berger\Documents\Project -20170913T192716Z-001\Project\x64\Release\OPP2 - Project.pdb (Full PDB)
+  OPP2 - Project.vcxproj -> C:\Users\Zvika Berger\Desktop\Project - TMS\x64\Release\OPP2 - Project.exe
+  OPP2 - Project.vcxproj -> C:\Users\Zvika Berger\Desktop\Project - TMS\x64\Release\OPP2 - Project.pdb (Full PDB)

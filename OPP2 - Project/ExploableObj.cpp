@@ -29,3 +29,5 @@ void ExploableObj::updateMove()
 
 	setLive(!m_myBomb->getAnim()->isEnd());
 }
+
+

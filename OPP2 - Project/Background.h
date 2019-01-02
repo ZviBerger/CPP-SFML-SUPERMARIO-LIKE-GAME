@@ -1,9 +1,11 @@
 #pragma once
 #include "GameObject.h"
 #include <vector>
+#include "RelativelyMovingObj.h"
 using SingleScreen = std::pair<sf::RectangleShape, V2f>;
 static sf::Color getRandomColor() {
 using namespace sf;
+
 static const std::vector<Color> colors{ Color::Yellow,Color::Blue,Color::Cyan,Color::Green,Color::Magenta,Color::Red };
 return colors[rand() % colors.size()];
 
@@ -69,10 +71,12 @@ public:
 	virtual void draw(sf::RenderWindow & window);
 	virtual void updateMove();
 	void setPosition(const V2f&);
+	V2f getPosition() const { return m_mainBGP; }
 private:
 	sf::RectangleShape  m_mainBG;
 	V2f m_mainBGP;
 	std::vector<layer> m_layers;
+	std::vector<std::unique_ptr<RelativelyMovingObj>> m_spaceObjects;
 	Movments m_direction;
 	V2f m_factor;
 	bool m_moved;

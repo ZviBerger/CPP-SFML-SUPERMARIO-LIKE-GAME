@@ -36,6 +36,7 @@ std::shared_ptr<GameObject> Factory::create(const std::string & name, V2f & scal
 
 	return it->second(scaling, position);
 }
+
 ////////////////////////////////////////////////////////////////////
 
 bool Factory::registerit(const std::string & name, std::shared_ptr<GameObject>(*f)(V2f &scaling, V2f &position))

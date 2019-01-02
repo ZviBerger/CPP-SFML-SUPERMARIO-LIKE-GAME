@@ -11,7 +11,7 @@ Fruit::Fruit(sf::Vector2f &scaling, sf::Vector2f& position)
 	if (!loaded)
 		loaded = txt.loadFromFile(path2image::fruit);
 	setAnim(std::make_shared<Animation>(txt, 0, 0, 205, 205.333, 6, 0.09));
-	m_myTextBox.settings("+2", sf::Vector2f{ 1,1 }, position);
+	m_myTextBox.settings("+100", sf::Vector2f{ 1,1 }, position);
 	m_myTextBox.editCharSize(30);
 	m_myTextBox.setPosition(sf::Vector2f{ position.x,position.y - 50 });
 
@@ -35,8 +35,7 @@ void Fruit::collide(Astronaut & otherObject)
 void Fruit::draw(sf::RenderWindow & window)
 {
 	MovableObject::draw(window);
-	if (m_eated)
-		m_myTextBox.draw(window);
+	if (m_eated) m_myTextBox.draw(window);
 }
 
 void Fruit::eated(const bool & eated)

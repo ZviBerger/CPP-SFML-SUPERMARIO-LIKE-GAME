@@ -11,7 +11,7 @@ public:
 	virtual void collide(Bomb& otherObject) { ; }
 	virtual void collide(Fruit& otherObject) { ; }
 	virtual void collide(Rock& otherObject) { ; }
-	virtual void collide(Shot& otherObject) { ; }
+	virtual void collide(Shot& otherObject);
 	virtual void collide(SpaceShip& otherObject) { ; }
 
 

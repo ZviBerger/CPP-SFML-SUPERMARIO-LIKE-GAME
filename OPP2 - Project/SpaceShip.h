@@ -21,7 +21,8 @@ public:
 
 private:
 	bool m_astroInside;
-	std::unique_ptr<Animation> m_r1;
-	std::unique_ptr<Animation> m_r2;
+	bool m_init;
+	std::unique_ptr<Animation> m_leftRocket;
+	std::unique_ptr<Animation> m_rightRocket;
 };
 

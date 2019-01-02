@@ -8,8 +8,7 @@ Controller::Controller()
 {
 	srand(unsigned( time(0)));
 	m_window.create(sf::VideoMode{unsigned int(windowSize.x),unsigned int(windowSize.y) }, "The Moon Survivor", 5);
-	m_window.setFramerateLimit(60);
-	
+	m_window.setFramerateLimit(100);
 }
 
 
@@ -23,17 +22,18 @@ Controller::~Controller()
 void Controller::startGame(std::string levelPathFile)
 {
 	setLevel(levelPathFile);
-	
 	m_menu = std::make_unique<Menu>(sf::Texture{}, V2f{ 0,0 }, windowSize, m_window);
-	bool go2nextLevel = true;
-	while (m_window.isOpen()&& m_menu->newGame() )
+	while (m_menu->newGame())
 	{
+			bool go2nextLevel = true;
 
 			for (unsigned level = 0; level < m_level.size() && go2nextLevel  ; level++)
 			//for any level call runLevel function
 				go2nextLevel = runLevel(level);
 
 	}
+	
+
 }
 
 /////////////////////////////////////////////////////////////////////////////////////
@@ -80,7 +80,7 @@ bool Controller::runLevel(const unsigned int & levelInd)
 
 		if ( m_graphView->finishLevel())
 			return finishLevel();  //true
-		if( m_graphView->isGameOver())
+		if( m_graphView->isGameOver() )
 			return gameOverPrint(); //false
 	}
 
@@ -162,10 +162,15 @@ void Controller::betweenLevelsPrint()
 		V2f{ m_graphView->getViewPosition().x - float(m_window.getSize().x / 2) + 350, m_graphView->getViewPosition().y  } };
 	goodLuck.editCharSize(80);
 	sf::Clock clock;
-
-	goodLuck.draw(m_window);
-	youScore.draw(m_window);
-	m_window.display();
+	do {
+		m_movmentMode = FALL;
+		m_graphView->checkCollide();
+		m_graphView->updateMove(m_movmentMode, m_side2move);
+		m_graphView->drawView(m_window);
+		goodLuck.draw(m_window);
+		youScore.draw(m_window);
+		m_window.display();
+	}
 	while (int(clock.getElapsedTime().asSeconds()) < 8);
 }
 /////////////////////////////////////////////////////////////////////////////////////
@@ -195,14 +200,23 @@ bool Controller::finishLevel()
 bool Controller::gameOverPrint()
 {
 	int score = m_graphView->getScore();
-	TextBox gemeOver{ "Game Over", V2f{ m_graphView->getViewPosition().x - float(m_window.getSize().x /2) + 350, m_graphView->getViewPosition().y - 100 } };
-	TextBox	youScore{ "your score is: " + std::to_string(score) + " !" , V2f{ m_graphView->getViewPosition().x - float(m_window.getSize().x / 2) +350,  m_graphView->getViewPosition().y} };
-	gemeOver.editCharSize(80);
+	TextBox gameOver{ "Game Over", V2f{ m_graphView->getViewPosition().x - float(m_window.getSize().x /2) + 350, m_graphView->getViewPosition().y - 100 } };
+	TextBox	youScore{ "your score is: " + std::to_string(score) +".    Try again!", V2f{ m_graphView->getViewPosition().x - float(m_window.getSize().x / 2) +350,  m_graphView->getViewPosition().y} };
+	gameOver.editCharSize(100);
+	youScore.editCharSize(40);
 	sf::Clock clock;
-	gemeOver.draw(m_window);
-	youScore.draw(m_window);
-	m_window.display();
-	while (int(clock.getElapsedTime().asSeconds()) < 10);
+	do {
+		m_movmentMode = FALL;
+		m_graphView->checkCollide();
+		m_graphView->updateMove(m_movmentMode, m_side2move);
+		m_graphView->drawView(m_window);
+		gameOver.setPosition(V2f{ m_graphView->getViewPosition().x - float(m_window.getSize().x / 2) + 350, m_graphView->getViewPosition().y - 120 });
+		youScore.setPosition(V2f{ m_graphView->getViewPosition().x - float(m_window.getSize().x / 2) + 350,  m_graphView->getViewPosition().y  });
+		gameOver.draw(m_window);
+		youScore.draw(m_window);
+		m_window.display();
+	}
+	while (int(clock.getElapsedTime().asSeconds()) < 5);
 	sf::View v{ V2f{ windowSize.x / 2,windowSize.y / 2 },windowSize };
 	m_window.setView(v);
 	return false;

@@ -1,13 +1,28 @@
 #include "Astronaut.h"
 #include "TextBox.h"
+#include<math.h>
+#include "Fog.h"
+//////////////////////////////////////////////////////////////
+/// Constants section
+/////////////////////////////////////////////////////////////
+const float MaxAccel  = 6.f;
+const float ZeroAccel = 0.f;
+const float IncAccel = 0.1f;
+const float DecAccel = 0.3f;
 
 ////////////////////////////////////////////////////////
 // Astronaut C-tor
 ////////////////////////////////////////////////////////
 Astronaut::Astronaut(sf::Vector2f &scaling, sf::Vector2f& position)
 	:MovableObject(scaling, sf::FloatRect{ position.x,position.y,50, 110 }),
-	m_jumping(false),m_falling(false),m_moving(false),m_fruitNum(0),m_lifesNum(5)
-	,m_jumpCount(0)
+	m_jumping(false),
+	m_falling(false),
+	m_moving(false),
+	m_falling2space(false),
+	m_fruitNum(0),
+	m_lifesNum(5),
+	m_jumpCount(0),
+	m_accel(0)
 {
 	static sf::Texture txt{};
 	static bool loaded = false;
@@ -26,9 +41,8 @@ Astronaut::Astronaut(sf::Vector2f &scaling, sf::Vector2f& position)
 	setAnim(m_animNow);
 
 	//My physics values
-	m_phv._v0 = 24;
-	m_phv._g = 20;   // 1.622;
-	m_phv._angel =0.5;
+	m_phv._v0 = 8;
+	m_phv._g = 12;   // 1.622;
 
 	m_dx = position.x;
 	m_dy = position.y;
@@ -46,15 +60,29 @@ void Astronaut::updateMove()
 {
 	bool jumpBefor = m_jumping;
 	float t = m_clock.getElapsedTime().asSeconds();
-	float goUp   = m_phv._v0*sin(m_phv._angel)*t ;
-	float goDown = m_cm2._down? 0.5f * m_phv._g * t*t : 0.f ;
+	float goUp   = m_phv._v0*t ;
+	float goDown = m_cm2._down? 0.5f * m_phv._g * t*t : 0.f ; // y= v0*t- 1/2*g*t^2 
 
-	m_jumping = (m_jumping &&  goUp >= goDown) ? true : false;
-	if (m_jumping != jumpBefor) m_clock.restart();
-	m_dy -=  m_jumping? goUp - goDown : -goDown;
-	
+	m_jumping = (m_jumping &&  goUp >= goDown); //he is jumpimg or falling?
+
+	if (m_jumping != jumpBefor)//recursive calling in case of he's on top of jumping path
+		//otherwise there is a bit pic in he's movment
+	{
+		m_clock.restart();
+		updateMove();
+		return;
+	}
+
+
+	m_dy -=  ( m_jumping? goUp  : 0.f) - goDown ;
+	m_dx += m_accel;
 	setPosition(sf::Vector2f{ m_dx,m_dy });
-	
+	m_go->setSpeed(std::min( abs( m_accel) / 10, 0.3f));
+	m_accel -= m_accel > 0 ? 0.03 : m_accel < 0 ? -0.03 : 0;
+	m_accel = abs( m_accel) <= 0.03 ? 0 : m_accel;
+	m_accel != 0 ? m_animNow->updateAnim() : [](){};
+
+	m_falling2space = m_falling && m_clock.getElapsedTime().asSeconds() > 5;
 }
 ////////////////////////////////////////////////////////
 // draw
@@ -65,13 +93,21 @@ void Astronaut::draw(sf::RenderWindow & window)
 	if (!m_animNow) return;
 	sf::FloatRect fl = getGlobalBounds();
 	sf::Vector2f np{ fl.left + fl.width / 2 ,fl.top + fl.height / 2 };
+	
 	m_animNow->setPosition(np);
 	window.draw(m_animNow->getSprite());
-
-	//////////////////////////////for debuging////////////////////////////////////
-	//sf::FloatRect ast = getGlobalBounds();
 	
-	/*auto BL = sf::Vector2f{ ast.left +10 ,ast.top + ast.height-10 };
+
+
+
+	/*///////////////////////////for debuging////////////////////////////////////
+	TextBox tb{ std::to_string(m_accel),getPosition() };
+	tb.draw(window);
+	
+	sf::FloatRect ast = getGlobalBounds();
+
+	
+	auto BL = sf::Vector2f{ ast.left +10 ,ast.top + ast.height-10 };
 	auto BR = sf::Vector2f{ ast.left + ast.width-10 ,ast.top + ast.height -10};
 	auto TR = sf::Vector2f{ ast.left + ast.width ,ast.top };
 	auto TL = sf::Vector2f{ ast.left  ,ast.top };
@@ -108,7 +144,7 @@ void Astronaut::draw(sf::RenderWindow & window)
 	window.draw(mr2);
 	window.draw(ml1);
 	window.draw(ml2);
-	*/
+	//*/
 
 
 	
@@ -119,14 +155,16 @@ void Astronaut::draw(sf::RenderWindow & window)
 void Astronaut::setMove(Movments action, Movments key)
 {
 	m_moving = true; 
+	m_accel = (m_accel > 0 && m_cm2._right) ? m_accel : (m_accel < 0 && m_cm2._left) ? m_accel :0 ;
+
 	switch (action)
 	{
 	case Movments::GO:		
 	{	
 	if (key == RIGHT && m_cm2._right)
-		m_dx += 4;
-	if (key == LEFT && m_cm2._left)
-		m_dx -=4;
+		m_accel += m_accel > MaxAccel ? 0: 00.1;
+	else if (key == LEFT && m_cm2._left)
+		m_accel -= m_accel < - MaxAccel ? 0 : 00.1;
 
 	m_animNow = m_go;
 	m_animNow->updateAnim();
@@ -156,14 +194,16 @@ void Astronaut::setMove(Movments action, Movments key)
 	break;
 	}
 	case Movments::MOVE:
-	{	if (key == ALL)
+	{	
+	if (key == ALL)
 	{
 		m_cm2._down = m_cm2._up = m_cm2._right = m_cm2._left = true;
 	}
 	break;
 	}
 	case Movments::FALL:
-	{	if (!m_falling && !m_jumping && m_cm2._down)
+	{	
+	if (!m_falling && !m_jumping && m_cm2._down)
 	{
 		m_clock.restart();
 		m_falling = true;
@@ -183,26 +223,38 @@ void Astronaut::setMove(Movments action, Movments key)
 ////////////////////////////////////////////////////////
 void Astronaut::stop(Movments forbidenDir)
 {
+
+
 	switch (forbidenDir)
 	{
 	case RIGHT:
+	{
 		m_cm2._right = false;
-		break;
+		break; 
+	}
 	case LEFT:
+	{
 		m_cm2._left = false;
 		break;
+	}
 	case UP:
-		m_cm2._up = m_jumping= false;
+	{
+		m_cm2._up = m_jumping = false;
 		break;
+	}
 	case DOWN:
-		m_cm2._down =   false;
+	{
+		setStandAnim();
+		m_cm2._down = false;
 		m_jumpCount = 0;
 		if (!m_jumping)
 		{
 			m_falling = false;
 			m_clock.restart();
 		}
-		break;
+		break; 
+	}
+		
 	default:
 		break;
 	}

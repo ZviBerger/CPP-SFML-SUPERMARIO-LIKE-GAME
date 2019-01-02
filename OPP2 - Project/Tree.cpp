@@ -10,7 +10,7 @@ Tree::Tree(sf::Vector2f &scaling, sf::Vector2f& position)
 	if (!loaded)
 	loaded = txt.loadFromFile(path2image::tree);
 	setSpriteTexture(txt);
-     getSprite().setColor(getRandomColor());
+	getSprite().setColor(getRandomColor());
 }
 
 

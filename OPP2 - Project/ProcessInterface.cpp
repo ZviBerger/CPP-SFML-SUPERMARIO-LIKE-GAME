@@ -34,18 +34,27 @@ void ProcessInterface::astroidHitAlien(Astroid & astr, Alien & ali)
 ////////////////////////////////////////////////////////////////////
 void ProcessInterface::astroidHitAstronout(Astroid & astr, Astronaut & atron)
 {
-	static bool hitOnceAstr = false;
-	static sf::Clock clockHitAstr{};
+	static bool hitOnce = false;
+	static sf::Clock clock{};
 	
-	if (astr.collideWithMe(atron.getGlobalBounds())) {
-		if (!hitOnceAstr)
+	if (!astr.collideWithMe(atron.getGlobalBounds())) return;
+
+
+		hitOnce = !(hitOnce && clock.getElapsedTime().asSeconds() >= SECONST);
+
+
+		if (!hitOnce)
 		{
+			hitOnce = true;
 			atron.reduceLife();
-			clockHitAstr.restart();
-			hitOnceAstr = true;
+			clock.restart();
+			
+
 		}
 		astr.setIfHit(true);
-	}
+
+	
+	
 }
 ////////////////////////////////////////////////////////////////////
 void ProcessInterface::astroidHitRock(Astroid & astr, Rock & rock)
@@ -148,6 +157,17 @@ void ProcessInterface::astronautHitSpaceShip(Astronaut & astron, SpaceShip & sp)
 		sp.setAstroInside(true);
 		m_sound.playEndLevel();
 		astron.cameToShip();
+	}
+}
+///////////////NEW////////////////////////////////////
+void ProcessInterface::shotHitRock(Shot & shot, Rock & rock)
+{
+	return;  //
+
+	if (shot.collideWithMe(rock.getGlobalBounds())) {
+		m_sound.playExplode();
+		shot.setIfHit(true);
+		rock.setLive(false);
 	}
 }
 ////////////////////////////////////////////////////////////////////

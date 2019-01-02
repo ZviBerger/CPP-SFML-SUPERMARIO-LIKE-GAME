@@ -5,12 +5,12 @@ RR                                            A               A                 
 RR                                                                                     A                          RR                            S       RR
 RR                                                                                                                RR                                    RR
 RR     H                                                                                                          RR                                    RR
-RR                                                                                                                RR                                    RR
-RR            PF H F F                                              A                                  A          RR                                    RR
+RR             FFFFFFFF                                                                                           RR                                    RR
+RR            PFFFFFFFF                                             A                                  A          RR                                    RR
 RR            RRRRRRRRR                                                                                           RR                                    RR
 RR                                                                                                                RR          F     F                   RR
 RR                                                         T                                                      RR                                    RR
-RR  H  7           T    H      T    A  F   t    +      H      &     T   H      8    H     A      T  H R           RR F   T    A   H  R       T          RR
+RR  H  R           T    H      T    A  F   t    +      H      &     T   H      8    H     A      T  H R           RR F   T    A   H  R       T          RR
 RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR           RRRRRRRRRRRRRRRRRRRRR      RRRRRRRRRRRRR
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@           R@@@@@@@@@@@@@@@@@@@R    R@@@@@@@@@@@@@R
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@           R@@@@@@@@@@@@@@@@@@@R   R@@@@@@@@@@@@@@R

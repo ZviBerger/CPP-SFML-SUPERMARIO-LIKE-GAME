@@ -43,15 +43,14 @@ private:
 	std::map < char, std::function<void(V2f  & p)> > m_charsMap;
 	std::unique_ptr<Background> m_bg;
 	sf::View m_view;
-	sf::RectangleShape m_background{ windowSize };
 	sf::Texture m_bgtxt;
 	sf::FloatRect m_windowRec;
 	size_t m_rowsNum;
 	size_t m_colsNum;
 	unsigned int m_level;
-	bool m_gameOver;
+	
 	static PlaySound m_sound;
-
+	sf::Clock m_fallingTime;
 
 	void updateCharsMap();
 	void setTheGraph(std::string level);

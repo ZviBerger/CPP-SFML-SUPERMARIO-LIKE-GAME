@@ -27,5 +27,3 @@ private:
 	struct PhysicalValues m_phv;
 
 };
-
-

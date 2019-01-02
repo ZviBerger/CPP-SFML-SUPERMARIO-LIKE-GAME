@@ -25,10 +25,10 @@ private:
 	float m_thickness = 1;
 	int m_buttIndex = 0;
 	int m_buttNum = 3;
-	sf::RenderWindow &m_window;
+	sf::RenderWindow & m_window;
 	sf::RectangleShape m_background;
 	std::vector<sf::RectangleShape> m_buttons;
-	void Menu::showOtherWindow(const WindowButton &button, std::string path2image, const sf::Vector2f &winSize);
+	void showOtherWindow(const WindowButton &button, std::string path2image, const sf::Vector2f &winSize);
 	bool handleEvent();
 	bool buttenPreset();
 	void showHelp();
